@@ -40,8 +40,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 100,
     borderRadius: 13,
-    margin: 3,
-    resizeMode: 'cover',
+    margin: 3
   },
   imageActive: {
     flex: 1,

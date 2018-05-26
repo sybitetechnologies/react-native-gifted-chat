@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Image, StyleSheet, View, ViewPropTypes } from 'react-native';
 import Lightbox from 'react-native-lightbox';
+import { CachedImage } from 'react-native-cached-image';
 
 export default function MessageImage({
   containerStyle,
@@ -20,7 +21,7 @@ export default function MessageImage({
         }}
         {...lightboxProps}
       >
-        <Image
+        <CachedImage
           {...imageProps}
           style={[styles.image, imageStyle]}
           source={{ uri: currentMessage.image }}
@@ -31,7 +32,10 @@ export default function MessageImage({
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    paddingRight:5,
+    paddingBottom:5,
+  },
   image: {
     width: 150,
     height: 100,
